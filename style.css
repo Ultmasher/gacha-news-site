@@ -1,35 +1,47 @@
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #111827;
-    color: white;
-  }
-  
-  header {
-    background: #1f2937;
-    padding: 20px;
-  }
-  
-  nav a {
-    color: white;
-    margin-right: 15px;
-    text-decoration: none;
-  }
-  
-  .hero {
-    padding: 40px;
-    text-align: center;
-  }
-  
-  .news-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    padding: 20px;
-  }
-  
-  article {
-    background: #1f2937;
-    padding: 20px;
-    border-radius: 12px;
-  }
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0f172a;
+  color: white;
+}
+
+header {
+  background: #111827;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 15px;
+}
+
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.news-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  background: #1e293b;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.card img {
+  width: 100%;
+}
+
+.card h3,
+.card p {
+  padding: 10px 15px;
+}
