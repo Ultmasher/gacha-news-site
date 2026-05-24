@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0f172a;
+  color: white;
+}
+
+header {
+  background: #111827;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 15px;
+}
+
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.news-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  background: #1e293b;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.card img {
+  width: 100%;
+}
+
+.card h3,
+.card p {
+  padding: 10px 15px;
+}
+footer {
+  text-align: center;
+  padding: 30px;
+  background: #111827;
+  color: #94a3b8;
+  margin-top: 40px;
+}
+.search-input {
+  margin-top: 20px;
+  padding: 14px 18px;
+  width: 280px;
+  max-width: 90%;
+  border-radius: 10px;
+  border: none;
+  font-size: 16px;
+}
