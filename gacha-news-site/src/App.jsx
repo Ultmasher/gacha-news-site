@@ -12,6 +12,7 @@ import GamePage from './pages/GamePage'
 import Games from './pages/Games'
 import Drama from './pages/Drama'
 import DramaArticle from './pages/DramaArticle'
+import TierListArticle from './pages/TierListArticle'
 
 function App() {
   return (
@@ -27,6 +28,8 @@ function App() {
           <Route path="/games/:gameName" element={<GamePage />} />
           <Route path="/drama" element={<Drama />} />
           <Route path="/drama/:id" element={<DramaArticle />} />
+          <Route path="/tier-lists" element={<TierLists />} />
+          <Route path="/tier-lists/:id" element={<TierListArticle />} />
         </Routes>
       </Layout>
     </BrowserRouter>
