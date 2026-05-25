@@ -7,30 +7,39 @@ function Header() {
   return (
     <header className="sticky top-0 z-50 bg-slate-950/80 backdrop-blur border-b border-slate-800">
 
-      <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+      <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
 
+        {/* Logo */}
         <Link
           to="/"
-          className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent"
+          className="text-2xl font-bold bg-gradient-to-r from-pink-500 to-purple-400 bg-clip-text text-transparent"
         >
-          Gacha News Hub
+          Gacha Drama Hub
         </Link>
 
         {/* Desktop Menu */}
         <nav className="hidden md:flex gap-6 text-slate-300">
-          <Link className="hover:text-white" to="/">Home</Link>
 
-          <Link className="hover:text-white" to="/news">
+          <Link className="hover:text-white transition" to="/">
+            Home
+          </Link>
+
+          <Link className="hover:text-white transition" to="/drama">
+            Drama
+          </Link>
+
+          <Link className="hover:text-white transition" to="/news">
             News
           </Link>
 
-          <Link className="hover:text-white" to="/guides">
-            Guides
-          </Link>
-
-          <Link className="hover:text-white" to="/tier-lists">
+          <Link className="hover:text-white transition" to="/tier-lists">
             Tier Lists
           </Link>
+
+          <Link className="hover:text-white transition" to="/games">
+            Games
+          </Link>
+
         </nav>
 
         {/* Mobile Button */}
@@ -45,13 +54,20 @@ function Header() {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <nav className="md:hidden flex flex-col px-6 pb-6 gap-4 text-slate-300">
+        <nav className="md:hidden flex flex-col gap-4 px-6 pb-6 text-slate-300 bg-slate-950">
 
           <Link
             onClick={() => setMenuOpen(false)}
             to="/"
           >
             Home
+          </Link>
+
+          <Link
+            onClick={() => setMenuOpen(false)}
+            to="/drama"
+          >
+            Drama
           </Link>
 
           <Link
@@ -63,16 +79,16 @@ function Header() {
 
           <Link
             onClick={() => setMenuOpen(false)}
-            to="/guides"
+            to="/tier-lists"
           >
-            Guides
+            Tier Lists
           </Link>
 
           <Link
             onClick={() => setMenuOpen(false)}
-            to="/tier-lists"
+            to="/games"
           >
-            Tier Lists
+            Games
           </Link>
 
         </nav>
